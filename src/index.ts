@@ -1,6 +1,10 @@
+import db from './farebase/config';
 
+const usuario ={
+    nombre: 'Samuel',
+    Activo: true,
+    fechanaci: 0
 
-
-const mensaje = 'Hola Mundo!';
-
-console.log( mensaje );
+}
+db.collection('usuarios')
+  .add( usuario )
