@@ -1,11 +1,10 @@
-import db  from './farebase/config';
+import db from './firebase/config';
 
-const usuario={
-    nombre: 'samuel',
+const usuario = {
+    nombre: 'Samuel',
     activo: true,
-    fechanaci: 0
+    fechaNaci: 0
 }
 
 db.collection('usuarios')
-.add( usuario )
-
+.add(usuario)
