@@ -1,2 +1,1 @@
-const mensaje= 'Hola mundo';
-console.log(mensaje);
+import './firebase/config';
