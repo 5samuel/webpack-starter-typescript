@@ -1,16 +1,16 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCXQHtPutoIg5lggArbefMoubLmGqadwjA",
-    authDomain: "sql-demos-1c711.firebaseapp.com",
-    databaseURL: "https://sql-demos-1c711-default-rtdb.firebaseio.com",
-    projectId: "sql-demos-1c711",
-    storageBucket: "sql-demos-1c711.appspot.com",
-    messagingSenderId: "515929991343",
-    appId: "1:515929991343:web:cd2453fc7587dcad100c5a",
-    measurementId: "G-SC80QPSJ4F"
+ const firebaseConfig = {
+    apiKey: "AIzaSyCVByBwxb2mWeCENNai9Ggp7j2bmJVFomA",
+    authDomain: "angeles-app.firebaseapp.com",
+    databaseURL: "https://angeles-app-default-rtdb.firebaseio.com",
+    projectId: "angeles-app",
+    storageBucket: "angeles-app.appspot.com",
+    messagingSenderId: "779411017919",
+    appId: "1:779411017919:web:ff4eb1033c1e3c6068760a",
+    measurementId: "G-SHBXJKXFS4"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  
   export default firebase.firestore()
