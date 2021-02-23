@@ -25,8 +25,19 @@ const usuarioRef= db.collection('usuarios');
  .then (() => console.log('borrado'))
  .catch(e => console.log('error', e));*/
 
- usuarioRef
+ /*usuarioRef
  .onSnapshot( snap => {
     retronarDocumento(snap);
     
- })
+ })*/
+
+ //usuarioRef.where('Salario', '>',1800 ).get().then( retronarDocumento);
+
+/* usuarioRef.where('Salario', '>', 1800 )
+ .where('usuario', '<', 2300)
+ .get().then( retronarDocumento);*/
+
+ 
+ usuarioRef.where('Salario', '>', 1800 )
+ .where('uactivo','==', true)
+ .get().then( retronarDocumento);
