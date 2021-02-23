@@ -5,7 +5,7 @@ const usuario={
     fechaNaci:0
 }
 //actualizacion 
-const usuarioRef= db.collection('usuario');
+const usuarioRef= db.collection('usuarios');
 /*db.collection('usuarios')
  .add(usuario)
  .then(docRef=> {
@@ -23,3 +23,17 @@ const usuarioRef= db.collection('usuario');
  .delete()
  .then (() => console.log('borrado'))
  .catch(e => console.log('error', e));*/
+
+ usuarioRef
+ .onSnapshot( snap => {
+     const usuarios: any[] =[];
+
+    snap.forEach( snapHijo => {
+        usuarios.push ({
+            id: snapHijo.id,
+            ...snapHijo.data()
+        });
+        console.log (snapHijo.data)
+    });
+    
+ })
