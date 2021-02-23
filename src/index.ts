@@ -1,4 +1,5 @@
 import db from './firebase/config';
+import {retronarDocumento} from './herpers/mostrar-documentos';
 const usuario={
     nombre: 'Samuel',
     activo:true,
@@ -26,14 +27,6 @@ const usuarioRef= db.collection('usuarios');
 
  usuarioRef
  .onSnapshot( snap => {
-     const usuarios: any[] =[];
-
-    snap.forEach( snapHijo => {
-        usuarios.push ({
-            id: snapHijo.id,
-            ...snapHijo.data()
-        });
-        console.log (snapHijo.data)
-    });
+    retronarDocumento(snap);
     
  })
