@@ -7,5 +7,20 @@ const usuario={
 }
 
 const usuarioRef= db.collection('usuarios');
-usuarioRef.orderBy('usuario')
-    .get().then(retronarDocumento)
+const btnNext = document.createElement('button');
+btnNext.innerText = 'Next page';
+document.body.append( btnNext)
+
+let lastDocument: any =null;
+btnNext.addEventListener('click', () => {
+    const query = usuarioRef
+        .orderBy('nombre')
+        .startAfter(lastDocument)
+
+query.limit(2).get().then(snap =>{
+    lastDocument = snap.docs[ snap.docs.length -1];
+    retronarDocumento(snap);
+})
+
+});
+btnNext.click();
