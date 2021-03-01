@@ -11,6 +11,9 @@ import 'firebase/firestore';
     measurementId: "G-SHBXJKXFS4"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
   
-  export default firebase.firestore()
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
+  export default firebase.firestore();
+
